@@ -1,0 +1,7 @@
+name: windModel
+
+conda_env: python_env.yaml
+
+entry_points:
+  main:
+    command: "python Assignment2-train_model.py"

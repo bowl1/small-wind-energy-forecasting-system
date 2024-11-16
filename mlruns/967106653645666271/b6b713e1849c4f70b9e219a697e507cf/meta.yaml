@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/libowen/SD3rd/bigdata/assign2/bowl/mlruns/967106653645666271/b6b713e1849c4f70b9e219a697e507cf/artifacts
+end_time: 1731776105564
+entry_point_name: ''
+experiment_id: '967106653645666271'
+lifecycle_stage: active
+run_id: b6b713e1849c4f70b9e219a697e507cf
+run_name: lyrical-panda-691
+run_uuid: b6b713e1849c4f70b9e219a697e507cf
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1731776079215
+status: 3
+tags: []
+user_id: libowen

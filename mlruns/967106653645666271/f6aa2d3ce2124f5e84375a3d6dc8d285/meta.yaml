@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/libowen/SD3rd/bigdata/assign2/bowl/mlruns/967106653645666271/f6aa2d3ce2124f5e84375a3d6dc8d285/artifacts
+end_time: 1731720806121
+entry_point_name: ''
+experiment_id: '967106653645666271'
+lifecycle_stage: active
+run_id: f6aa2d3ce2124f5e84375a3d6dc8d285
+run_name: exultant-robin-223
+run_uuid: f6aa2d3ce2124f5e84375a3d6dc8d285
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1731720788179
+status: 3
+tags: []
+user_id: libowen

@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/libowen/SD3rd/bigdata/assign2/bowl/mlruns/967106653645666271/876547f59bac4c318fb35f216724296a/artifacts
+end_time: 1731592920231
+entry_point_name: ''
+experiment_id: '967106653645666271'
+lifecycle_stage: active
+run_id: 876547f59bac4c318fb35f216724296a
+run_name: magnificent-lark-322
+run_uuid: 876547f59bac4c318fb35f216724296a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1731592832209
+status: 3
+tags: []
+user_id: libowen

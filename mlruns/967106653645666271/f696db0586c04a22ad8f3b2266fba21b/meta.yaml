@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/libowen/SD3rd/bigdata/assign2/bowl/mlruns/967106653645666271/f696db0586c04a22ad8f3b2266fba21b/artifacts
+end_time: 1731771108542
+entry_point_name: ''
+experiment_id: '967106653645666271'
+lifecycle_stage: active
+run_id: f696db0586c04a22ad8f3b2266fba21b
+run_name: casual-koi-25
+run_uuid: f696db0586c04a22ad8f3b2266fba21b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1731771094498
+status: 4
+tags: []
+user_id: libowen

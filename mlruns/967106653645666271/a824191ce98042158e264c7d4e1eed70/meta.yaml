@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/libowen/SD3rd/bigdata/assign2/bowl/mlruns/967106653645666271/a824191ce98042158e264c7d4e1eed70/artifacts
+end_time: 1731535462354
+entry_point_name: ''
+experiment_id: '967106653645666271'
+lifecycle_stage: active
+run_id: a824191ce98042158e264c7d4e1eed70
+run_name: PolynomialRegression_degree_3
+run_uuid: a824191ce98042158e264c7d4e1eed70
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1731535452337
+status: 3
+tags: []
+user_id: libowen

@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/libowen/SD3rd/bigdata/assign2/bowl/mlruns/967106653645666271/be3a00b7f7d441fd95798e4a63ba2feb/artifacts
+end_time: 1731535462629
+entry_point_name: ''
+experiment_id: '967106653645666271'
+lifecycle_stage: active
+run_id: be3a00b7f7d441fd95798e4a63ba2feb
+run_name: receptive-moth-642
+run_uuid: be3a00b7f7d441fd95798e4a63ba2feb
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1731535378874
+status: 3
+tags: []
+user_id: libowen

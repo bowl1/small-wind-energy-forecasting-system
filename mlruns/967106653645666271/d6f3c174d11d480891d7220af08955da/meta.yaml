@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/libowen/SD3rd/bigdata/assign2/bowl/mlruns/967106653645666271/d6f3c174d11d480891d7220af08955da/artifacts
+end_time: 1731701562964
+entry_point_name: ''
+experiment_id: '967106653645666271'
+lifecycle_stage: active
+run_id: d6f3c174d11d480891d7220af08955da
+run_name: abundant-croc-752
+run_uuid: d6f3c174d11d480891d7220af08955da
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1731701560670
+status: 4
+tags: []
+user_id: libowen

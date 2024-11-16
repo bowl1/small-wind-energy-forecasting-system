@@ -1,0 +1,15 @@
+name: mlflow-tensorflow
+dependencies:
+  - python=3.10
+  - numpy
+  - pandas
+  - matplotlib
+  - scikit-learn
+  - seaborn
+  - tensorflow    # 添加 TensorFlow
+  - pip
+  - pip:
+      - mlflow
+      - influxdb
+      - jupyter
+      - statsmodels

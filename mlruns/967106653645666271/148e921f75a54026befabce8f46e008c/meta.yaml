@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/libowen/SD3rd/bigdata/assign2/bowl/mlruns/967106653645666271/148e921f75a54026befabce8f46e008c/artifacts
+end_time: 1731701498613
+entry_point_name: ''
+experiment_id: '967106653645666271'
+lifecycle_stage: active
+run_id: 148e921f75a54026befabce8f46e008c
+run_name: resilient-fox-67
+run_uuid: 148e921f75a54026befabce8f46e008c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1731701417376
+status: 3
+tags: []
+user_id: libowen

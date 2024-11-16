@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1731775138056
+current_stage: None
+description: null
+last_updated_timestamp: 1731775138056
+name: Traditional Wind Power Model
+run_id: de396bdea28847b689b74981d2aa9f3a
+run_link: null
+source: file:///Users/libowen/SD3rd/bigdata/assign2/bowl/mlruns/967106653645666271/de396bdea28847b689b74981d2aa9f3a/artifacts/traditional_model
+status: READY
+status_message: null
+storage_location: file:///Users/libowen/SD3rd/bigdata/assign2/bowl/mlruns/967106653645666271/de396bdea28847b689b74981d2aa9f3a/artifacts/traditional_model
+user_id: null
+version: 4

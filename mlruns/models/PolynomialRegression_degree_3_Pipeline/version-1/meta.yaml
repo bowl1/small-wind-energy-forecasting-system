@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1731787223474
+current_stage: None
+description: null
+last_updated_timestamp: 1731787223474
+name: PolynomialRegression_degree_3_Pipeline
+run_id: 27987f83803f4acd93609fc59933f24c
+run_link: null
+source: file:///Users/libowen/SD3rd/bigdata/assign2/bowl/mlruns/967106653645666271/27987f83803f4acd93609fc59933f24c/artifacts/traditional_model
+status: READY
+status_message: null
+storage_location: file:///Users/libowen/SD3rd/bigdata/assign2/bowl/mlruns/967106653645666271/27987f83803f4acd93609fc59933f24c/artifacts/traditional_model
+user_id: null
+version: 1

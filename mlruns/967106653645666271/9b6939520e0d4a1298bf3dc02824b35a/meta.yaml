@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/libowen/SD3rd/bigdata/assign2/bowl/mlruns/967106653645666271/9b6939520e0d4a1298bf3dc02824b35a/artifacts
+end_time: 1731589013997
+entry_point_name: ''
+experiment_id: '967106653645666271'
+lifecycle_stage: active
+run_id: 9b6939520e0d4a1298bf3dc02824b35a
+run_name: lyrical-shark-381
+run_uuid: 9b6939520e0d4a1298bf3dc02824b35a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1731588862109
+status: 4
+tags: []
+user_id: libowen

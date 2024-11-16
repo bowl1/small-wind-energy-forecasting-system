@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/libowen/SD3rd/bigdata/assign2/bowl/mlruns/967106653645666271/1c424a78fec844a19b16772fd1199c95/artifacts
+end_time: 1731616067494
+entry_point_name: ''
+experiment_id: '967106653645666271'
+lifecycle_stage: active
+run_id: 1c424a78fec844a19b16772fd1199c95
+run_name: rare-pig-810
+run_uuid: 1c424a78fec844a19b16772fd1199c95
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1731616042759
+status: 3
+tags: []
+user_id: libowen
