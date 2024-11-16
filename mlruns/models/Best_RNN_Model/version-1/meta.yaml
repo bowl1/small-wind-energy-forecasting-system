@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1731710060343
+current_stage: None
+description: null
+last_updated_timestamp: 1731710060343
+name: Best_RNN_Model
+run_id: 455ecfec86ac4255b68c4b6491837f41
+run_link: null
+source: file:///Users/libowen/SD3rd/bigdata/assign2/bowl/mlruns/967106653645666271/455ecfec86ac4255b68c4b6491837f41/artifacts/RNN_model
+status: READY
+status_message: null
+storage_location: file:///Users/libowen/SD3rd/bigdata/assign2/bowl/mlruns/967106653645666271/455ecfec86ac4255b68c4b6491837f41/artifacts/RNN_model
+user_id: null
+version: 1

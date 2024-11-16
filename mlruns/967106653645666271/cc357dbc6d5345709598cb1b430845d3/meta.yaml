@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/libowen/SD3rd/bigdata/assign2/bowl/mlruns/967106653645666271/cc357dbc6d5345709598cb1b430845d3/artifacts
+end_time: 1731592812382
+entry_point_name: ''
+experiment_id: '967106653645666271'
+lifecycle_stage: active
+run_id: cc357dbc6d5345709598cb1b430845d3
+run_name: dashing-shad-512
+run_uuid: cc357dbc6d5345709598cb1b430845d3
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1731592597060
+status: 3
+tags: []
+user_id: libowen

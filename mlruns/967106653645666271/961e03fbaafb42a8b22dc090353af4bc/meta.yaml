@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/libowen/SD3rd/bigdata/assign2/bowl/mlruns/967106653645666271/961e03fbaafb42a8b22dc090353af4bc/artifacts
+end_time: 1731776952703
+entry_point_name: ''
+experiment_id: '967106653645666271'
+lifecycle_stage: active
+run_id: 961e03fbaafb42a8b22dc090353af4bc
+run_name: blushing-stag-564
+run_uuid: 961e03fbaafb42a8b22dc090353af4bc
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1731776945197
+status: 3
+tags: []
+user_id: libowen

@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/libowen/SD3rd/bigdata/assign2/bowl/mlruns/967106653645666271/92f3fb93a1134d1384e84a9c5da2197c/artifacts
+end_time: 1731779023573
+entry_point_name: ''
+experiment_id: '967106653645666271'
+lifecycle_stage: active
+run_id: 92f3fb93a1134d1384e84a9c5da2197c
+run_name: classy-slug-30
+run_uuid: 92f3fb93a1134d1384e84a9c5da2197c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1731779014156
+status: 4
+tags: []
+user_id: libowen

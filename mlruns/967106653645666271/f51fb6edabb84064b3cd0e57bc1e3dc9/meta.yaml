@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/libowen/SD3rd/bigdata/assign2/bowl/mlruns/967106653645666271/f51fb6edabb84064b3cd0e57bc1e3dc9/artifacts
+end_time: 1731622146808
+entry_point_name: ''
+experiment_id: '967106653645666271'
+lifecycle_stage: active
+run_id: f51fb6edabb84064b3cd0e57bc1e3dc9
+run_name: adaptable-hawk-818
+run_uuid: f51fb6edabb84064b3cd0e57bc1e3dc9
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1731622130933
+status: 3
+tags: []
+user_id: libowen

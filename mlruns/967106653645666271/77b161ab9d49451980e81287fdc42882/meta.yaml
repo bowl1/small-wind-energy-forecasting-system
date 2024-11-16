@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/libowen/SD3rd/bigdata/assign2/bowl/mlruns/967106653645666271/77b161ab9d49451980e81287fdc42882/artifacts
+end_time: 1731593682980
+entry_point_name: ''
+experiment_id: '967106653645666271'
+lifecycle_stage: active
+run_id: 77b161ab9d49451980e81287fdc42882
+run_name: crawling-mule-974
+run_uuid: 77b161ab9d49451980e81287fdc42882
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1731593643879
+status: 3
+tags: []
+user_id: libowen

@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/libowen/SD3rd/bigdata/assign2/bowl/mlruns/967106653645666271/de396bdea28847b689b74981d2aa9f3a/artifacts
+end_time: 1731775138553
+entry_point_name: ''
+experiment_id: '967106653645666271'
+lifecycle_stage: active
+run_id: de396bdea28847b689b74981d2aa9f3a
+run_name: rebellious-steed-249
+run_uuid: de396bdea28847b689b74981d2aa9f3a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1731775109243
+status: 3
+tags: []
+user_id: libowen

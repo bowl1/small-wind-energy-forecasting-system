@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/libowen/SD3rd/bigdata/assign2/bowl/mlruns/967106653645666271/d7a0dec4c84842e0a0a62946f3f2e406/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '967106653645666271'
+lifecycle_stage: active
+run_id: d7a0dec4c84842e0a0a62946f3f2e406
+run_name: capricious-kite-171
+run_uuid: d7a0dec4c84842e0a0a62946f3f2e406
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1730819878635
+status: 1
+tags: []
+user_id: libowen

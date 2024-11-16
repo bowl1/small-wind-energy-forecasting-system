@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/libowen/SD3rd/bigdata/assign2/bowl/mlruns/967106653645666271/b9f37837ff3046d4950d95e95cc67184/artifacts
+end_time: 1731708210687
+entry_point_name: ''
+experiment_id: '967106653645666271'
+lifecycle_stage: active
+run_id: b9f37837ff3046d4950d95e95cc67184
+run_name: valuable-hawk-655
+run_uuid: b9f37837ff3046d4950d95e95cc67184
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1731708188203
+status: 4
+tags: []
+user_id: libowen

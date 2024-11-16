@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/libowen/SD3rd/bigdata/assign2/bowl/mlruns/967106653645666271/caa0ef7c8a074842b4ddcd137c6bf225/artifacts
+end_time: 1731787319349
+entry_point_name: ''
+experiment_id: '967106653645666271'
+lifecycle_stage: active
+run_id: caa0ef7c8a074842b4ddcd137c6bf225
+run_name: gaudy-snake-800
+run_uuid: caa0ef7c8a074842b4ddcd137c6bf225
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1731787294790
+status: 3
+tags: []
+user_id: libowen
