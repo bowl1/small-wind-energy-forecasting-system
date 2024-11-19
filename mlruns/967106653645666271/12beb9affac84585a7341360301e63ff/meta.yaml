@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/libowen/SD3rd/bigdata/assign2/bowl/mlruns/967106653645666271/12beb9affac84585a7341360301e63ff/artifacts
+end_time: 1732026201973
+entry_point_name: ''
+experiment_id: '967106653645666271'
+lifecycle_stage: active
+run_id: 12beb9affac84585a7341360301e63ff
+run_name: loud-zebra-648
+run_uuid: 12beb9affac84585a7341360301e63ff
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1732024195410
+status: 4
+tags: []
+user_id: libowen

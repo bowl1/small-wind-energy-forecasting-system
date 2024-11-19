@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/libowen/SD3rd/bigdata/assign2/bowl/mlruns/967106653645666271/e19a9d676f3f4e1da46452c45254769b/artifacts
+end_time: 1731961296919
+entry_point_name: ''
+experiment_id: '967106653645666271'
+lifecycle_stage: active
+run_id: e19a9d676f3f4e1da46452c45254769b
+run_name: nosy-seal-902
+run_uuid: e19a9d676f3f4e1da46452c45254769b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1731960422408
+status: 4
+tags: []
+user_id: libowen
