@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/libowen/SD3rd/bigdata/assign2/bowl/mlruns/967106653645666271/130f01333c06465898cd22206273934d/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '967106653645666271'
+lifecycle_stage: active
+run_id: 130f01333c06465898cd22206273934d
+run_name: overjoyed-donkey-748
+run_uuid: 130f01333c06465898cd22206273934d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1731951557898
+status: 1
+tags: []
+user_id: libowen

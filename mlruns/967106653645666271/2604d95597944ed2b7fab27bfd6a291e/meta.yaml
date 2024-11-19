@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/libowen/SD3rd/bigdata/assign2/bowl/mlruns/967106653645666271/2604d95597944ed2b7fab27bfd6a291e/artifacts
+end_time: 1731959564680
+entry_point_name: ''
+experiment_id: '967106653645666271'
+lifecycle_stage: active
+run_id: 2604d95597944ed2b7fab27bfd6a291e
+run_name: treasured-bird-484
+run_uuid: 2604d95597944ed2b7fab27bfd6a291e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1731958933257
+status: 3
+tags: []
+user_id: libowen

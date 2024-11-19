@@ -7,10 +7,13 @@ from sklearn.preprocessing import StandardScaler, PolynomialFeatures, OneHotEnco
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import TimeSeriesSplit
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
-from tensorflow.keras.models import Sequential
+import tensorflow as tf
+from tensorflow.keras.models import Sequential, load_model
 from tensorflow.keras.layers import Dense, LSTM, Dropout, Input
+from xgboost import XGBRegressor
 import matplotlib.pyplot as plt
 import mlflow
+from matplotlib.dates import DateFormatter
 
 # Database connection settings
 settings = {
@@ -66,7 +69,7 @@ def encode_wind_direction(df):
 
 
 # Fetch and preprocess data
-def fetch_data(days=90):
+def fetch_data(days=365):
     power_set = client.query(f"SELECT * FROM Generation WHERE time > now()-{days}d")
     wind_set = client.query(
         f"SELECT * FROM MetForecasts WHERE time > now()-{days}d AND Lead_hours = '1'"
@@ -89,6 +92,11 @@ def fetch_data(days=90):
 
     # 对数据进行风向编码
     df = encode_wind_direction(df)
+
+    # 添加月份和星期几特征
+    df["month"] = df.index.month  # 提取月份，值为 1 到 12
+    df["day_of_week"] = df.index.dayofweek  # 提取星期几，值为 0（周一）到 6（周日）
+    df["hour"] = df.index.hour
 
     # Check for NaN values
     if df.isnull().any().any():
@@ -122,38 +130,54 @@ def create_windowed_dataset(data, window_size):
 
 # Define regression models
 def build_pipelines():
+    # 定义需要的特征
     numeric_features = ["Speed", "Direction_sin", "Direction_cos"]
+    categorical_features = ["month", "day_of_week", "hour"]
 
     # 数值特征标准化
     numeric_transformer = StandardScaler()
 
+    # 类别特征OneHot编码
+    categorical_transformer = OneHotEncoder(handle_unknown="ignore")
+
     preprocessor = ColumnTransformer(
         transformers=[
             ("num", numeric_transformer, numeric_features),
+            ("cat", categorical_transformer, categorical_features),
         ]
     )
 
+    # XGBoost 管道
+    xgboost_pipeline = Pipeline(
+        [
+            ("preprocessor", preprocessor),
+            ("regressor", XGBRegressor(objective="reg:squarederror")),
+        ]
+    )
+
+    # 多项式回归管道
+    polynomial_pipeline = Pipeline(
+        [
+            ("preprocessor", preprocessor),
+            (
+                "poly_features",
+                PolynomialFeatures(degree=2),
+            ),  # 多项式特征（degree可以调整）
+            ("regressor", LinearRegression()),  # 使用线性回归作为回归器
+        ]
+    )
+
+    # 将两个管道存入字典
     pipelines = {
-        "LinearRegression": Pipeline(
-            [("preprocessor", preprocessor), ("regressor", LinearRegression())]
-        ),
+        "XGBoost": xgboost_pipeline,
+        "PolynomialRegression_degree_2": polynomial_pipeline,
     }
 
-    for degree in range(2, 4):  # Polynomial Regression
-        pipelines[f"PolynomialRegression_degree_{degree}"] = Pipeline(
-            [
-                ("preprocessor", preprocessor),
-                ("poly_features", PolynomialFeatures(degree=degree)),
-                ("regressor", LinearRegression()),
-            ]
-        )
     return pipelines
 
 
 # Train and evaluate all models including RNN
-def train_and_evaluate_all(
-    pipelines, X, y, window_size=24, rnn_save_path="saved_rnn_model.keras"
-):
+def train_and_evaluate_all(pipelines, X, y, window_size=90 * 24):
     results = {}
     tscv = TimeSeriesSplit(n_splits=5)
 
@@ -169,6 +193,7 @@ def train_and_evaluate_all(
 
     # Evaluate regression models
     for model_name, pipeline in pipelines.items():
+        print(f"Training model: {model_name}")
         mae_scores, mse_scores, r2_scores = [], [], []
         model_predictions = []
 
@@ -269,6 +294,7 @@ def train_and_evaluate_all(
     # Plot predictions from linear regression and other models
     for model_name, predictions in aligned_predictions_dict.items():
         plt.plot(predictions.index, predictions, label=f"{model_name} Predictions")
+        print(f"Model: {model_name}, Number of aligned predictions: {len(predictions)}")
 
     # Plot RNN and truth values for the RNN prediction period
     plt.plot(
@@ -291,10 +317,10 @@ def train_and_evaluate_all(
 
     plt.xlabel("Time (Days)")
     plt.xticks(
-        rnn_predictions_series.index[::24], rotation=45
-    )  # Select every 24th index to show daily ticks
+        rnn_predictions_series.index[::168], rotation=45
+    )  # Select every 1week index to show daily ticks
     plt.gca().xaxis.set_major_formatter(
-        plt.FixedFormatter(rnn_predictions_series.index[::24].strftime("%Y-%m-%d"))
+        plt.FixedFormatter(rnn_predictions_series.index[::168].strftime("%Y-%m-%d"))
     )
     plt.title("Model Predictions vs Truth")
     plt.legend()
@@ -302,10 +328,7 @@ def train_and_evaluate_all(
     plt.savefig("train_model.png")
     plt.show()
 
-    model.save(rnn_save_path)
-    print(f"RNN model saved at '{rnn_save_path}'")
     return results, model
-
 
 # Main function
 def main():
@@ -316,9 +339,7 @@ def main():
     df = handle_outliers(df, numeric_columns)
 
     # 定义输入特征和目标
-    X = df[
-        ["Speed", "Direction_sin", "Direction_cos"]
-    ]
+    X = df[["Speed", "Direction_sin", "Direction_cos", "month", "day_of_week", "hour"]]
     y = df["Total"]
     # 打印训练数据的形状
     print(f"Training data shape: {X.shape}")
@@ -330,14 +351,11 @@ def main():
     # 启动 MLflow 运行
     with mlflow.start_run() as run:
         # 记录基础参数
-        mlflow.log_param("data_days", 90)
-        mlflow.log_param("window_size", 24)
+        mlflow.log_param("data_days", 365)
+        mlflow.log_param("window_size", 90 * 24)
 
         # Train and evaluate all models (including RNN)
-        rnn_save_path = "saved_rnn_model.keras"  # Path to save/load the RNN model
-        results, model = train_and_evaluate_all(
-            pipelines, X, y, rnn_save_path=rnn_save_path
-        )
+        results, model = train_and_evaluate_all(pipelines, X, y)
 
         # 记录每个模型的指标到 MLflow
         for model_name, metrics in results.items():
@@ -365,16 +383,21 @@ def main():
 
         # 保存最佳模型
         if best_model_name == "RNN":
-            # 如果最佳模型是 RNN，使用 Keras 保存并记录到 MLflow
-            print(f"The RNN model is the best and already saved at '{rnn_save_path}'")
-            mlflow.keras.log_model(
-                model,  # Keras 模型对象
-                artifact_path="RNN_model",  # 保存路径
-                registered_model_name="Best_RNN_Model",  # 可选：注册模型的名称
-            )
+            # 如果最佳模型是 RNN，使用 TensorFlow 保存并记录到 MLflow
+            print(f"The RNN model is the best and already saved")
 
+            # 保存模型到指定路径
+            model_save_path = "saved_rnn_model"
+            model.save(model_save_path, save_format="tf")  # 保存为 TensorFlow 格式
+
+            # 使用 MLflow TensorFlow 保存模型
+            mlflow.tensorflow.log_model(
+                model=model,  # Keras 模型对象
+                artifact_path="RNN_model",  # 保存路径
+                registered_model_name="Best_RNN_Model"  # 可选：注册模型的名称
+            )
         else:
-           # 如果最佳模型是传统模型，保存完整管道
+            # 如果最佳模型是传统模型，保存完整管道
             best_pipeline = pipelines[best_model_name]
             mlflow.sklearn.log_model(
                 sk_model=best_pipeline,  # 保存完整管道

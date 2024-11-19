@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1731972255309
+current_stage: None
+description: null
+last_updated_timestamp: 1731972255309
+name: XGBoost
+run_id: 9f58519ecaf04a8d9d822a5549b4629d
+run_link: null
+source: file:///Users/libowen/SD3rd/bigdata/assign2/bowl/mlruns/967106653645666271/9f58519ecaf04a8d9d822a5549b4629d/artifacts/traditional_model
+status: READY
+status_message: null
+storage_location: file:///Users/libowen/SD3rd/bigdata/assign2/bowl/mlruns/967106653645666271/9f58519ecaf04a8d9d822a5549b4629d/artifacts/traditional_model
+user_id: null
+version: 1

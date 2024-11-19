@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/libowen/SD3rd/bigdata/assign2/bowl/mlruns/967106653645666271/bb776d8859ea493ab5e7a50b6a8f52a5/artifacts
+end_time: 1731956809799
+entry_point_name: ''
+experiment_id: '967106653645666271'
+lifecycle_stage: active
+run_id: bb776d8859ea493ab5e7a50b6a8f52a5
+run_name: kindly-cod-283
+run_uuid: bb776d8859ea493ab5e7a50b6a8f52a5
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1731956791525
+status: 4
+tags: []
+user_id: libowen

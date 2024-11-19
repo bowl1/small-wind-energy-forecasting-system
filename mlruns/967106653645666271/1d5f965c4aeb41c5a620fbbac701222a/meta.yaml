@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/libowen/SD3rd/bigdata/assign2/bowl/mlruns/967106653645666271/1d5f965c4aeb41c5a620fbbac701222a/artifacts
+end_time: 1731950908569
+entry_point_name: ''
+experiment_id: '967106653645666271'
+lifecycle_stage: active
+run_id: 1d5f965c4aeb41c5a620fbbac701222a
+run_name: treasured-duck-964
+run_uuid: 1d5f965c4aeb41c5a620fbbac701222a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1731950903591
+status: 4
+tags: []
+user_id: libowen

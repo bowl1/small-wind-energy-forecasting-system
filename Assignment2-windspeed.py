@@ -46,6 +46,10 @@ wind_df.index = pd.to_datetime(wind_df.index)
 wind_df = wind_df.resample("D").mean()  # Resample to daily mean
 wind_df['Speed'] = wind_df['Speed'].interpolate()  # Interpolate missing values
 
+# 查看时间列的类型和示例数据
+print(wind_df.index)
+print(type(wind_df.index))
+
 # Convert power generation query result to DataFrame
 values_power = power_set.raw["series"][0]["values"]
 columns_power = power_set.raw["series"][0]["columns"]
