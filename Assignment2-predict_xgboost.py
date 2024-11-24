@@ -21,7 +21,7 @@ client.switch_database("orkney")
 
 
 # 获取数据并处理为 DataFrame
-def fetch_data(days=90):
+def fetch_data(days=180):
     query = f"""
     SELECT * FROM "MetForecasts"
     WHERE time > now() - {days}d AND Lead_hours = '1'
@@ -60,7 +60,7 @@ def encode_wind_direction(df):
 
 # 获取未来30天的输入数据
 def prepare_data_for_prediction():
-    df = fetch_data(90)  # 获取90天数据
+    df = fetch_data(180)  # 获取180天数据
     df = encode_wind_direction(df)
 
     df["month"] = df["time"].dt.month
@@ -82,7 +82,7 @@ def prepare_data_for_prediction():
 
 
 # 加载 MLflow 中的模型
-def load_mlflow_model(model_uri='runs:/9f58519ecaf04a8d9d822a5549b4629d/traditional_model'):
+def load_mlflow_model(model_uri='runs:/c3d32d6e60b54f2db8c6e59ecc22bf88/traditional_model'):
     # 使用 model_uri 加载模型
     model = mlflow.pyfunc.load_model(model_uri)
     return model

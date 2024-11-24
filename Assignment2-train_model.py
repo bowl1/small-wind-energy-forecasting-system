@@ -69,7 +69,7 @@ def encode_wind_direction(df):
 
 
 # Fetch and preprocess data
-def fetch_data(days=365):
+def fetch_data(days=180):
     power_set = client.query(f"SELECT * FROM Generation WHERE time > now()-{days}d")
     wind_set = client.query(
         f"SELECT * FROM MetForecasts WHERE time > now()-{days}d AND Lead_hours = '1'"
@@ -123,7 +123,7 @@ def handle_outliers(df, numeric_columns):
 def create_windowed_dataset(data, window_size):
     X, y = [], []
     for i in range(len(data) - window_size):
-        X.append(data[i : i + window_size, 1:])  # 只使用特征列（去掉目标值列）
+        X.append(data[i : i + window_size, 1:])  # 只使用特征列作为X（去掉目标值列）
         y.append(data[i + window_size, 0])  # 使用第1列作为目标值
     return np.array(X), np.array(y)
 
@@ -162,7 +162,7 @@ def build_pipelines():
             (
                 "poly_features",
                 PolynomialFeatures(degree=2),
-            ),  # 多项式特征（degree可以调整）
+            ),  
             ("regressor", LinearRegression()),  # 使用线性回归作为回归器
         ]
     )
@@ -177,7 +177,7 @@ def build_pipelines():
 
 
 # Train and evaluate all models including RNN
-def train_and_evaluate_all(pipelines, X, y, window_size=90 * 24):
+def train_and_evaluate_all(pipelines, X, y, window_size=30 * 24):
     results = {}
     tscv = TimeSeriesSplit(n_splits=5)
 
@@ -211,6 +211,7 @@ def train_and_evaluate_all(pipelines, X, y, window_size=90 * 24):
             r2_scores.append(r2_score(y_test, predictions_series))
 
             model_predictions.append(predictions_series)
+            
             if not y_truth.empty:
                 y_truth = pd.concat([y_truth, y_test])
             else:
@@ -330,6 +331,7 @@ def train_and_evaluate_all(pipelines, X, y, window_size=90 * 24):
 
     return results, model
 
+
 # Main function
 def main():
 
@@ -351,8 +353,8 @@ def main():
     # 启动 MLflow 运行
     with mlflow.start_run() as run:
         # 记录基础参数
-        mlflow.log_param("data_days", 365)
-        mlflow.log_param("window_size", 90 * 24)
+        mlflow.log_param("data_days", 180)
+        mlflow.log_param("window_size", 30 * 24)
 
         # Train and evaluate all models (including RNN)
         results, model = train_and_evaluate_all(pipelines, X, y)
@@ -394,7 +396,7 @@ def main():
             mlflow.tensorflow.log_model(
                 model=model,  # Keras 模型对象
                 artifact_path="RNN_model",  # 保存路径
-                registered_model_name="Best_RNN_Model"  # 可选：注册模型的名称
+                registered_model_name="Best_RNN_Model",  # 可选：注册模型的名称
             )
         else:
             # 如果最佳模型是传统模型，保存完整管道
