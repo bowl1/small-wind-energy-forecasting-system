@@ -1,0 +1,8 @@
+{
+    "dataframe_split": {
+        "columns": ["Speed", "Direction_sin", "Direction_cos", "month", "day_of_week", "hour"],
+        "data": [
+            [12.3, 0.5, 0.86, 1, 0, 12]
+        ]
+    }
+}

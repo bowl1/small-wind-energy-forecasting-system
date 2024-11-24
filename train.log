@@ -1,0 +1,24 @@
+Traceback (most recent call last):
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/retraining_project/Assignment2-train_model.py", line 13, in <module>
+    from xgboost import XGBRegressor
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/venv/lib/python3.10/site-packages/xgboost/__init__.py", line 6, in <module>
+    from . import tracker  # noqa
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/venv/lib/python3.10/site-packages/xgboost/tracker.py", line 9, in <module>
+    from .core import _LIB, _check_call, make_jcargs
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/venv/lib/python3.10/site-packages/xgboost/core.py", line 269, in <module>
+    _LIB = _load_lib()
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/venv/lib/python3.10/site-packages/xgboost/core.py", line 222, in _load_lib
+    raise XGBoostError(
+xgboost.core.XGBoostError: 
+XGBoost Library (libxgboost.dylib) could not be loaded.
+Likely causes:
+  * OpenMP runtime is not installed
+    - vcomp140.dll or libgomp-1.dll for Windows
+    - libomp.dylib for Mac OSX
+    - libgomp.so for Linux and other UNIX-like OSes
+    Mac OSX users: Run `brew install libomp` to install OpenMP runtime.
+
+  * You are running 32-bit Python on a 64-bit OS
+
+Error message(s): ["dlopen(/Users/libowen/SD3rd/bigdata/assign2/bowl/venv/lib/python3.10/site-packages/xgboost/lib/libxgboost.dylib, 0x0006): Library not loaded: @rpath/libomp.dylib\n  Referenced from: <F2F42313-BF4F-3B95-A853-AE1DE94D4C87> /Users/libowen/SD3rd/bigdata/assign2/bowl/venv/lib/python3.10/site-packages/xgboost/lib/libxgboost.dylib\n  Reason: tried: '/opt/homebrew/opt/libomp/lib/libomp.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/opt/homebrew/opt/libomp/lib/libomp.dylib' (no such file), '/opt/homebrew/opt/libomp/lib/libomp.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/opt/homebrew/opt/libomp/lib/libomp.dylib' (no such file)"]
+
