@@ -1,7 +1,7 @@
 import os
 import subprocess
 import logging
-from datetime import datetime
+from crontab import CronTab
 
 # 设置日志路径
 current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -16,139 +16,153 @@ logging.basicConfig(
 )
 
 # 配置常量
-GIT_REPO_URL = "https://github.itu.dk/BDM-Autumn-2024/bowl_a2"  # 替换为你的 Git 仓库 URL
-LOCAL_REPO_DIR = os.path.join(current_dir, "retraining_project")
+DOCKER_COMPOSE_FILE = os.path.join(current_dir, "docker-compose.yml")
 MODEL_DIR = os.path.join(current_dir, "saved_model")
-DOCKER_IMAGE_NAME = "windpower_model"
-DOCKER_CONTAINER_NAME = "windpower_model_container"
 MINIO_ALIAS = "minio"
-MINIO_BUCKET = "models"
-MINIO_URL = "http://localhost:9000"
-MINIO_ACCESS_KEY = "admin"
-MINIO_SECRET_KEY = "password"
+MINIO_BUCKET = "mlflow"
 
-def update_repository():
-    """从 Git 仓库拉取最新代码"""
-    try:
-        if not os.path.exists(LOCAL_REPO_DIR):
-            logging.info("Cloning repository...")
-            subprocess.run(["git", "clone", GIT_REPO_URL, LOCAL_REPO_DIR], check=True)
-        else:
-            logging.info("Pulling latest changes from repository...")
-            subprocess.run(["git", "-C", LOCAL_REPO_DIR, "pull"], check=True)
-        logging.info("Repository updated successfully.")
-    except subprocess.CalledProcessError as e:
-        logging.error(f"Failed to update repository: {str(e)}")
-        raise
+# 确保环境变量
+os.environ["AWS_ACCESS_KEY_ID"] = "minioadmin"
+os.environ["AWS_SECRET_ACCESS_KEY"] = "minioadmin"
 
-def train_model():
-    """运行模型训练脚本"""
+
+def start_docker_compose():
+    """启动 Docker Compose 服务"""
     try:
-        logging.info("Starting model retraining...")
-        train_script = os.path.join(LOCAL_REPO_DIR, "Assignment2-train_model.py")
+        logging.info("Starting Docker Compose services...")
         subprocess.run(
-            f"nohup python3 {train_script} > train.log 2>&1 &",
-            shell=True,  # 启用 shell 特性
-            check=True   # 捕获错误
+            ["docker-compose", "-f", DOCKER_COMPOSE_FILE, "up", "-d"], check=True
         )
-        logging.info("Model retraining started successfully.")
+        logging.info("Docker Compose services started successfully.")
     except subprocess.CalledProcessError as e:
-        logging.error(f"Failed to start model retraining: {str(e)}")
+        logging.error(f"Failed to start Docker Compose services: {e.stderr}")
         raise
 
-def save_model_to_minio():
-    """将模型保存到 MinIO"""
+
+def stop_docker_compose():
+    """停止 Docker Compose 服务"""
+    try:
+        logging.info("Stopping Docker Compose services...")
+        subprocess.run(
+            ["docker-compose", "-f", DOCKER_COMPOSE_FILE, "down"], check=True
+        )
+        logging.info("Docker Compose services stopped successfully.")
+    except subprocess.CalledProcessError as e:
+        logging.error(f"Failed to stop Docker Compose services: {e.stderr}")
+        raise
+
+
+def ensure_minio_bucket_exists():
+    """确保 MinIO 存储桶存在"""
+    try:
+        logging.info(f"Checking if bucket '{MINIO_BUCKET}' exists in MinIO...")
+
+        # 使用 mc ls 检查存储桶是否存在
+        result = subprocess.run(
+            ["mc", "ls", f"{MINIO_ALIAS}/{MINIO_BUCKET}"],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True,
+        )
+
+        # 如果返回码非 0，说明存储桶不存在
+        if result.returncode != 0:
+            logging.info(f"Bucket '{MINIO_BUCKET}' does not exist. Creating it...")
+            subprocess.run(["mc", "mb", f"{MINIO_ALIAS}/{MINIO_BUCKET}"], check=True)
+            logging.info(f"Bucket '{MINIO_BUCKET}' created successfully.")
+        else:
+            logging.info(f"Bucket '{MINIO_BUCKET}' already exists.")
+    except subprocess.CalledProcessError as e:
+        logging.error(f"Failed to ensure bucket exists: {e.stderr}")
+        raise
+
+
+def upload_model_to_minio():
+    """上传模型到 MinIO"""
     try:
         logging.info("Uploading model to MinIO...")
-        subprocess.run(
-            ["mc", "alias", "set", MINIO_ALIAS, MINIO_URL, MINIO_ACCESS_KEY, MINIO_SECRET_KEY],
-            check=True,
-        )
-        subprocess.run(["mc", "mb", f"{MINIO_ALIAS}/{MINIO_BUCKET}"], check=False)
-        subprocess.run(["mc", "cp", "-r", MODEL_DIR, f"{MINIO_ALIAS}/{MINIO_BUCKET}"], check=True)
-        logging.info("Model uploaded to MinIO successfully.")
+        if os.path.exists(MODEL_DIR) and os.listdir(MODEL_DIR):
+            subprocess.run(
+                ["mc", "cp", "-r", MODEL_DIR, f"{MINIO_ALIAS}/{MINIO_BUCKET}"],
+                check=True,
+            )
+            logging.info("Model uploaded to MinIO successfully.")
+        else:
+            logging.error("Model directory is empty or does not exist.")
+            raise FileNotFoundError(
+                f"Model directory {MODEL_DIR} is empty or does not exist."
+            )
     except subprocess.CalledProcessError as e:
-        logging.error(f"Failed to upload model to MinIO: {str(e)}")
+        logging.error(f"Failed to upload model to MinIO: {e.stderr}")
         raise
 
-def build_and_run_docker():
-    """构建 Docker 镜像并运行服务"""
+
+def train_model():
+    """运行模型训练脚本并记录到 MLflow"""
     try:
-        # 停止旧容器
-        logging.info("Stopping old Docker container...")
-        subprocess.run(["docker", "stop", DOCKER_CONTAINER_NAME], check=False)
-        subprocess.run(["docker", "rm", DOCKER_CONTAINER_NAME], check=False)
-
-        # 构建新镜像
-        logging.info("Building Docker image...")
-        subprocess.run(
-            ["docker", "build", "-t", DOCKER_IMAGE_NAME, LOCAL_REPO_DIR],
-            check=True,
-        )
-
-        # 启动容器
-        logging.info("Starting Docker container...")
-        subprocess.run(
-            [
-                "docker", "run", "-d",
-                "--name", DOCKER_CONTAINER_NAME,
-                "-p", "5000:5000",
-                DOCKER_IMAGE_NAME,
-            ],
-            check=True,
-        )
-        logging.info("Docker container started successfully.")
+        logging.info("Starting model training...")
+        train_script = os.path.join(current_dir, "Assignment2-train_model.py")
+        subprocess.run(["python3", train_script], check=True)
+        logging.info("Model training completed successfully.")
     except subprocess.CalledProcessError as e:
-        logging.error(f"Failed to build/run Docker container: {str(e)}")
+        logging.error(f"Failed to train model: {e.stderr}")
         raise
+
 
 def setup_cron_job():
-    """设置定时任务"""
-    cron_command = (
-        f"0 0 * * * python3 {os.path.abspath(__file__)} > {os.path.join(log_dir, 'cron.log')} 2>&1"
-    )
+    """设置 cron 定时任务"""
     try:
-        logging.info("Setting up cron job...")
-        subprocess.run(["crontab", "-l"], stdout=open("current_cron", "w"), check=True)
-        with open("current_cron", "a") as cron_file:
-            cron_file.write(f"{cron_command}\n")
-        subprocess.run(["crontab", "current_cron"], check=True)
-        os.remove("current_cron")
-        logging.info("Cron job set up successfully.")
-    except subprocess.CalledProcessError as e:
-        logging.error(f"Failed to set up cron job: {str(e)}")
+        cron = CronTab(user=True)
+
+        # 脚本路径和日志路径
+        script_path = os.path.abspath(__file__)
+        log_path = os.path.join(log_dir, "cron.log")
+
+        # 定义 cron 命令
+        cron_command = f"/opt/anaconda3/envs/mlflow-tensorflow/bin/python {script_path} >> {log_path} 2>&1"
+
+        # 检查是否已存在相同任务
+        for job in cron:
+            if job.command == cron_command:
+                logging.info("Cron job already exists.")
+                return
+
+        # 创建新任务
+        job = cron.new(command=cron_command)
+        job.setall("0 0 * * 0")  # 每天午夜运行
+        cron.write()
+
+        logging.info("Cron job added successfully.")
+    except Exception as e:
+        logging.error(f"Failed to setup cron job: {str(e)}")
         raise
 
-def kill_previous_jobs():
-    """杀死旧的模型服务进程"""
-    try:
-        logging.info("Killing previous jobs...")
-        subprocess.run(["pkill", "-f", "mlflow"], check=False)
-        logging.info("Previous jobs killed successfully.")
-    except Exception as e:
-        logging.error(f"Failed to kill previous jobs: {str(e)}")
 
 if __name__ == "__main__":
     try:
-        logging.info("Starting integrated job...")
-        # 更新代码仓库
-        update_repository()
+        logging.info("Starting the integrated pipeline...")
 
-        # 杀死旧的进程
-        kill_previous_jobs()
-
-        # 训练模型
-        train_model()
-
-        # 将模型保存到 MinIO
-        save_model_to_minio()
-
-        # 使用 Docker 启动服务
-        build_and_run_docker()
-
-        # 设置定时任务（仅首次需要）
+        # 添加 cron 任务
         setup_cron_job()
 
-        logging.info("Integrated job completed successfully.")
+        # 启动 Docker 服务
+        start_docker_compose()
+
+        # 确保 MinIO 存储桶存在
+        ensure_minio_bucket_exists()
+
+        # 运行模型训练
+        train_model()
+
+        # 上传模型到 MinIO
+        upload_model_to_minio()
+
+        logging.info("Pipeline completed successfully.")
+        
+         # 添加一个空行到日志文件
+        with open(os.path.join(log_dir, "integrated_job.log"), "a") as log_file:
+            log_file.write("\n\n")
+            
     except Exception as e:
-        logging.error(f"An unexpected error occurred: {str(e)}")
+        logging.error(f"Pipeline execution failed: {str(e)}")
+        stop_docker_compose()

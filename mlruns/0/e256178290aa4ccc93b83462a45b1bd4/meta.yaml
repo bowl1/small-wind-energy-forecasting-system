@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/libowen/SD3rd/bigdata/assign2/bowl/mlruns/0/e256178290aa4ccc93b83462a45b1bd4/artifacts
+end_time: 1732571746918
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: e256178290aa4ccc93b83462a45b1bd4
+run_name: loud-pug-279
+run_uuid: e256178290aa4ccc93b83462a45b1bd4
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1732571558376
+status: 3
+tags: []
+user_id: libowen

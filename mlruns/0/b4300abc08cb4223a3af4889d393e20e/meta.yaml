@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/libowen/SD3rd/bigdata/assign2/bowl/mlruns/0/b4300abc08cb4223a3af4889d393e20e/artifacts
+end_time: 1732725551083
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: b4300abc08cb4223a3af4889d393e20e
+run_name: silent-goat-900
+run_uuid: b4300abc08cb4223a3af4889d393e20e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1732725362862
+status: 3
+tags: []
+user_id: libowen

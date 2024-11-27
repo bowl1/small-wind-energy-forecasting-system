@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/libowen/SD3rd/bigdata/assign2/bowl/mlruns/0/f8c8cd4a5a4e4a6883a0205dae418d83/artifacts
+end_time: 1732627167539
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: f8c8cd4a5a4e4a6883a0205dae418d83
+run_name: caring-worm-678
+run_uuid: f8c8cd4a5a4e4a6883a0205dae418d83
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1732626838707
+status: 3
+tags: []
+user_id: libowen

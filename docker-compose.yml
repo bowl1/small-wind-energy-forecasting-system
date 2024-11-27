@@ -1,0 +1,39 @@
+services:
+  minio:
+    image: minio/minio
+    container_name: mlflow_minio
+    environment:
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin
+    command: server /data
+    volumes:
+      - ./minio_data:/data
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+
+  mlflow:
+    build: .
+    container_name: mlflow_server
+    environment:
+      # MinIO 配置
+      MLFLOW_S3_ENDPOINT_URL: http://minio:9000
+      AWS_ACCESS_KEY_ID: minioadmin
+      AWS_SECRET_ACCESS_KEY: minioadmin
+      # 设置 MLflow Tracking Server 的默认 URI
+      MLFLOW_TRACKING_URI: http://mlflow:5000
+    ports:
+      - "5100:5000"  # 暴露端口
+    volumes:
+      - ./mlflow-data:/mlflow-data  # 本地挂载到容器
+    depends_on:
+      - minio  # 确保 MinIO 在 MLflow 启动前已就绪
+    command: >
+      mlflow server
+      --backend-store-uri file:/mlflow-data
+      --serve-artifacts
+      --artifacts-destination s3://mlflow
+
+volumes:
+  minio_data:
+  mlflow-data:

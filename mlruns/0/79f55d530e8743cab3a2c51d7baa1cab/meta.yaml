@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/libowen/SD3rd/bigdata/assign2/bowl/mlruns/0/79f55d530e8743cab3a2c51d7baa1cab/artifacts
+end_time: 1732568353748
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 79f55d530e8743cab3a2c51d7baa1cab
+run_name: grandiose-pig-125
+run_uuid: 79f55d530e8743cab3a2c51d7baa1cab
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1732568161469
+status: 3
+tags: []
+user_id: libowen
