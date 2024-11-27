@@ -14,6 +14,8 @@ from xgboost import XGBRegressor
 import matplotlib.pyplot as plt
 import mlflow
 from matplotlib.dates import DateFormatter
+import joblib
+import os
 
 # Database connection settings
 settings = {
@@ -401,6 +403,11 @@ def main():
         else:
             # 如果最佳模型是传统模型，保存完整管道
             best_pipeline = pipelines[best_model_name]
+            
+            output_dir = "/Users/libowen/SD3rd/bigdata/assign2/bowl/saved_model"
+            local_model_path = os.path.join(output_dir, "best_pipeline.pkl")
+            joblib.dump(best_pipeline, local_model_path)  # 保存到本地为 .pkl 文件
+            
             mlflow.sklearn.log_model(
                 sk_model=best_pipeline,  # 保存完整管道
                 artifact_path="traditional_model",  # 保存路径
@@ -411,3 +418,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
