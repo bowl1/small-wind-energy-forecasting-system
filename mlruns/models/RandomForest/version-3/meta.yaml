@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1734617625093
+current_stage: None
+description: null
+last_updated_timestamp: 1734617625093
+name: RandomForest
+run_id: 4649533270f44f099f3865458347d2ba
+run_link: null
+source: file:///Users/libowen/SD3rd/bigdata/assign2/bowl_%E5%89%AF%E6%9C%AC/mlruns/925431245205846442/4649533270f44f099f3865458347d2ba/artifacts/traditional_model
+status: READY
+status_message: null
+storage_location: file:///Users/libowen/SD3rd/bigdata/assign2/bowl_%E5%89%AF%E6%9C%AC/mlruns/925431245205846442/4649533270f44f099f3865458347d2ba/artifacts/traditional_model
+user_id: null
+version: 3

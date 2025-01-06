@@ -1,6 +1,6 @@
-artifact_location: file:///Users/libowen/SD3rd/bigdata/assign2/bowl/mlruns/0
-creation_time: 1730569952476
+artifact_location: file:///Users/libowen/SD3rd/bigdata/assign2/bowl_%E5%89%AF%E6%9C%AC/mlruns/0
+creation_time: 1734616868068
 experiment_id: '0'
-last_update_time: 1730569952476
+last_update_time: 1734616868068
 lifecycle_stage: active
 name: Default

@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/libowen/SD3rd/bigdata/assign2/bowl_%E5%89%AF%E6%9C%AC/mlruns/925431245205846442/147ad46be0354886aff0f1413ab00583/artifacts
+end_time: 1734617938240
+entry_point_name: ''
+experiment_id: '925431245205846442'
+lifecycle_stage: active
+run_id: 147ad46be0354886aff0f1413ab00583
+run_name: tasteful-mare-645
+run_uuid: 147ad46be0354886aff0f1413ab00583
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1734617921766
+status: 3
+tags: []
+user_id: libowen

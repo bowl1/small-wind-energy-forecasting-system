@@ -1,1 +1,487 @@
 Already up to date.
+Traceback (most recent call last):
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 149, in <module>
+    start_docker_compose()
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 33, in start_docker_compose
+    subprocess.run(
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 503, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 1863, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'docker-compose'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 168, in <module>
+    stop_docker_compose()
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 46, in stop_docker_compose
+    subprocess.run(
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 503, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 1863, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'docker-compose'
+Traceback (most recent call last):
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 149, in <module>
+    start_docker_compose()
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 33, in start_docker_compose
+    subprocess.run(
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 503, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 1863, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'docker-compose'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 168, in <module>
+    stop_docker_compose()
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 46, in stop_docker_compose
+    subprocess.run(
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 503, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 1863, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'docker-compose'
+Traceback (most recent call last):
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 149, in <module>
+    start_docker_compose()
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 33, in start_docker_compose
+    subprocess.run(
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 503, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 1863, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'docker-compose'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 168, in <module>
+    stop_docker_compose()
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 46, in stop_docker_compose
+    subprocess.run(
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 503, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 1863, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'docker-compose'
+Traceback (most recent call last):
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 149, in <module>
+    start_docker_compose()
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 33, in start_docker_compose
+    subprocess.run(
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 503, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 1863, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'docker-compose'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 168, in <module>
+    stop_docker_compose()
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 46, in stop_docker_compose
+    subprocess.run(
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 503, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 1863, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'docker-compose'
+Traceback (most recent call last):
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 149, in <module>
+    start_docker_compose()
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 33, in start_docker_compose
+    subprocess.run(
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 503, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 1863, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'docker-compose'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 168, in <module>
+    stop_docker_compose()
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 46, in stop_docker_compose
+    subprocess.run(
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 503, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 1863, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'docker-compose'
+Traceback (most recent call last):
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 149, in <module>
+    start_docker_compose()
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 33, in start_docker_compose
+    subprocess.run(
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 503, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 1863, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'docker-compose'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 168, in <module>
+    stop_docker_compose()
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 46, in stop_docker_compose
+    subprocess.run(
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 503, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 1863, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'docker-compose'
+Traceback (most recent call last):
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 149, in <module>
+    start_docker_compose()
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 33, in start_docker_compose
+    subprocess.run(
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 503, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 1863, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'docker-compose'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 168, in <module>
+    stop_docker_compose()
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 46, in stop_docker_compose
+    subprocess.run(
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 503, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 1863, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'docker-compose'
+Traceback (most recent call last):
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 149, in <module>
+    start_docker_compose()
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 33, in start_docker_compose
+    subprocess.run(
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 503, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 1863, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'docker-compose'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 168, in <module>
+    stop_docker_compose()
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 46, in stop_docker_compose
+    subprocess.run(
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 503, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 1863, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'docker-compose'
+Traceback (most recent call last):
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 149, in <module>
+    start_docker_compose()
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 33, in start_docker_compose
+    subprocess.run(
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 503, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 1863, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'docker-compose'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 168, in <module>
+    stop_docker_compose()
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 46, in stop_docker_compose
+    subprocess.run(
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 503, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 1863, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'docker-compose'
+Traceback (most recent call last):
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 149, in <module>
+    start_docker_compose()
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 33, in start_docker_compose
+    subprocess.run(
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 503, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 1863, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'docker-compose'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 168, in <module>
+    stop_docker_compose()
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 46, in stop_docker_compose
+    subprocess.run(
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 503, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 1863, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'docker-compose'
+Traceback (most recent call last):
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 149, in <module>
+    start_docker_compose()
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 33, in start_docker_compose
+    subprocess.run(
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 503, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 1863, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'docker-compose'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 168, in <module>
+    stop_docker_compose()
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 46, in stop_docker_compose
+    subprocess.run(
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 503, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 1863, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'docker-compose'
+Traceback (most recent call last):
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 149, in <module>
+    start_docker_compose()
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 33, in start_docker_compose
+    subprocess.run(
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 503, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 1863, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'docker-compose'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 168, in <module>
+    stop_docker_compose()
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 46, in stop_docker_compose
+    subprocess.run(
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 503, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 1863, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'docker-compose'
+Traceback (most recent call last):
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 149, in <module>
+    start_docker_compose()
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 33, in start_docker_compose
+    subprocess.run(
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 503, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 1863, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'docker-compose'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 168, in <module>
+    stop_docker_compose()
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 46, in stop_docker_compose
+    subprocess.run(
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 503, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 1863, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'docker-compose'
+Traceback (most recent call last):
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 149, in <module>
+    start_docker_compose()
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 33, in start_docker_compose
+    subprocess.run(
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 503, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 1863, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'docker-compose'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 168, in <module>
+    stop_docker_compose()
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 46, in stop_docker_compose
+    subprocess.run(
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 503, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 1863, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'docker-compose'
+Traceback (most recent call last):
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 149, in <module>
+    start_docker_compose()
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 33, in start_docker_compose
+    subprocess.run(
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 503, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 1863, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'docker-compose'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 168, in <module>
+    stop_docker_compose()
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 46, in stop_docker_compose
+    subprocess.run(
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 503, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 1863, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'docker-compose'
+Traceback (most recent call last):
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 149, in <module>
+    start_docker_compose()
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 33, in start_docker_compose
+    subprocess.run(
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 503, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 1863, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'docker-compose'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 168, in <module>
+    stop_docker_compose()
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 46, in stop_docker_compose
+    subprocess.run(
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 503, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 1863, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'docker-compose'
+Traceback (most recent call last):
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 149, in <module>
+    start_docker_compose()
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 33, in start_docker_compose
+    subprocess.run(
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 503, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 1863, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'docker-compose'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 168, in <module>
+    stop_docker_compose()
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 46, in stop_docker_compose
+    subprocess.run(
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 503, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 1863, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'docker-compose'
+Traceback (most recent call last):
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 149, in <module>
+    start_docker_compose()
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 33, in start_docker_compose
+    subprocess.run(
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 503, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 1863, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'docker-compose'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 168, in <module>
+    stop_docker_compose()
+  File "/Users/libowen/SD3rd/bigdata/assign2/bowl/scheduler.py", line 46, in stop_docker_compose
+    subprocess.run(
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 503, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 971, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/opt/anaconda3/envs/mlflow-tensorflow/lib/python3.10/subprocess.py", line 1863, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'docker-compose'

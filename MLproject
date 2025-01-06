@@ -1,7 +1,7 @@
-name: windModel
+name: windpower_prediction_Orkney
 
 conda_env: conda_env.yaml
 
 entry_points:
   main:
-    command: "python Assignment2-train_model.py"
+    command: "python trainModel.py"

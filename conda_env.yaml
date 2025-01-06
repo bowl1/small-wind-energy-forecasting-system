@@ -1,4 +1,4 @@
-name: mlflow-tensorflow
+name: mlflow-env
 dependencies:
   - python=3.10
   - numpy
@@ -6,7 +6,6 @@ dependencies:
   - matplotlib
   - scikit-learn
   - seaborn
-  - tensorflow=2.10.0   # 添加 TensorFlow
   - pip
   - pip:
       - mlflow

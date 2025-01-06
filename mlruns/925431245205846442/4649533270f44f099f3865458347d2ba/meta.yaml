@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/libowen/SD3rd/bigdata/assign2/bowl_%E5%89%AF%E6%9C%AC/mlruns/925431245205846442/4649533270f44f099f3865458347d2ba/artifacts
+end_time: 1734617625371
+entry_point_name: ''
+experiment_id: '925431245205846442'
+lifecycle_stage: active
+run_id: 4649533270f44f099f3865458347d2ba
+run_name: overjoyed-shoat-105
+run_uuid: 4649533270f44f099f3865458347d2ba
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1734617613109
+status: 3
+tags: []
+user_id: libowen
